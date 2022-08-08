@@ -17,16 +17,12 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-  
+    <ThemeProvider theme={theme}>  
        {/* NavBar Section*/} 
       <NavBar/>
-       {/* Breadcrumb Section*/}  
-
-       <Breadcrumb/> 
-              
-       <CartView/>   
-      
+       {/* Breadcrumb Section*/}
+       <Breadcrumb/>              
+       <CartView/>    
         
     <Box sx={{ display: 'flex' }}>     
         

@@ -1,15 +1,12 @@
 import { Typography, Grid, List, ListItem, ListItemText } from "@mui/material";
+import { IPackage } from "../../interfaces";
 
-interface Product {
-  name: string;
-  quantity: number;
-  price: number;
-  productList: any;
-}
 
-export const ProductView = ({ name, quantity, price, productList }: Product) => {
+export const ProductView = (product:IPackage) => {
+  const { name, quantity, price, productList } = product;
   return (
-    <Grid container>
+    <>
+      <Grid container>
       <Typography variant="h4">{name}</Typography>
       <Typography variant="h4">{quantity}</Typography>
       <Typography variant="h4">{price}</Typography>
@@ -24,5 +21,6 @@ export const ProductView = ({ name, quantity, price, productList }: Product) => 
       ))}*/}
      </List>
     </Grid>
+    </>  
   );
 };

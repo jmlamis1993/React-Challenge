@@ -1,33 +1,39 @@
 export default [
   {
+    id: 1,
     name: "My Christmas pack",
     quantity: 50,
     price: 71.2,
     productList: [
       {
-        product: "Cardboard box",
-        categorys: "container",
+        id: 1,
+        name: "Cardboard box",
+        category: "container",
       },
       {
-        product: "Unisex Short Sleeve T-Shirt",
-        categorys: "Green, Small",
+        id: 2,
+        name: "Unisex Short Sleeve T-Shirt",
+        category: "Green, Small",
       },
       {
-        product: "Basic bottle",
-        categorys: "Blue",
+        id: 3,
+        name: "Basic bottle",
+        category: "Blue",
       },
     ],
   },
   {
+    id: 2,
     name: "Basic T-Shirt",
     quantity: 10,
     price: 13.5,
-    productList: [],
+   
   },
   {
+    id: 2,
     name: "Woman bottle",
     quantity: 20,
     price: 36.5,
-    productList: [],
+    
   },
 ];
