@@ -30,7 +30,7 @@ export default [
    
   },
   {
-    id: 2,
+    id: 3,
     name: "Woman bottle",
     quantity: 20,
     price: 36.5,

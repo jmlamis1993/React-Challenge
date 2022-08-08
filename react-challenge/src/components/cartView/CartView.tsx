@@ -11,8 +11,8 @@ export const CartView = () => {
       <Grid container>
         <Typography variant="h5">Your cart (3)</Typography>
       </Grid>
-      {packages.map((product:IPackage) => {
-         <ProductView product={product}/>
+      {packages.map((pack) => {
+         return <ProductView key={pack.id} product={pack}/>
       }
     )}
     </>
