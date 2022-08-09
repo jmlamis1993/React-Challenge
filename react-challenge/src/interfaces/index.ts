@@ -29,3 +29,5 @@ export interface IPackage {
   |{type:"EditPackage"}
   |{type:"SetActivePackage",payload:IPackage}
   |{type:"ClearActivePackage"}
+  |{type:"UpdateTotalAmount",payload:number}
+  

@@ -1,8 +1,7 @@
-import  cartReducer  from '../reducers/cartReducer';
-import { createStore, compose, applyMiddleware } from 'redux';
+import { createStore} from 'redux';
+import cartReducer from '../reducers/cartReducer';
 
 
 export const store = createStore(
-    cartReducer, 
-  
+   cartReducer
   )

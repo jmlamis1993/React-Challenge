@@ -5,7 +5,7 @@ import {NavBar} from './components/navbar/NavBar';
 import './assets/css/style.module.css';
 import "@fontsource/open-sans";
 import { Breadcrumb } from './components/breadcrumb/Breadcrumb';
-import { CartView } from './components/cartView/CartView';
+import { CartView } from './components/cartview/CartView';
 
 
 const theme = createTheme({
