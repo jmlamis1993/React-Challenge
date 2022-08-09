@@ -1,5 +1,5 @@
 import { Typography, Grid, List, ListItem, ListItemText,Button,Stack } from "@mui/material";
-import { IPackage,PropsProductView } from "../../interfaces";
+import { PropsProductView } from "../../interfaces";
 import {useDispatch } from 'react-redux'
 import {DeletePackage} from '../../actions/cart'
 
@@ -7,6 +7,11 @@ import {DeletePackage} from '../../actions/cart'
 export const ProductView:React.FC<PropsProductView> = ({ product }) => {
   const dispatch = useDispatch();
   const {name,quantity,price,productList} = product;
+
+  const handleClik = () =>{
+    console.log('llego');
+    dispatch(DeletePackage())
+  }
   
   return (
     <>
@@ -15,7 +20,7 @@ export const ProductView:React.FC<PropsProductView> = ({ product }) => {
       <Typography variant="h4">{quantity}</Typography>
       <Typography variant="h4">{price}</Typography>
       <Stack direction="row">
-      <Button onClick={dispatch(DeletePackage())}>Primary</Button>
+      <Button onClick={handleClik}>Delete</Button>
       <Button href="#text-buttons">Link</Button>
     </Stack>
       <List>
