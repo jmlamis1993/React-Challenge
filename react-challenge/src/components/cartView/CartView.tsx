@@ -9,14 +9,16 @@ import { UpdateTotalAmount } from "../../actions/cart";
 export const CartView = () => {
   const packages = useSelector<IState, IPackage[]>((state) => state.cart);
   const dispatch = useDispatch();
-  const total = useSelector<IState, number>(
-    (state) => state.totalAmount
-  );
+  const total = useSelector<IState, number>((state) => state.totalAmount);
   useEffect(() => {
-    //const total = packages.map(({quantity,price}) => quantity*price).reduce((a,c)=> a+c);
-    const total = 5;
-    dispatch(UpdateTotalAmount(total))
-  },[packages]);
+    let total = 0;
+    if (packages.length != 0) {
+      total = packages
+        .map(({ quantity, price }) => quantity * price)
+        .reduce((a, c) => a + c);
+    }
+    dispatch(UpdateTotalAmount(total));
+  }, [packages]);
   return (
     <>
       <Grid container>
