@@ -1,28 +1,29 @@
-import { Typography, Grid, List, ListItem, ListItemText } from "@mui/material";
-import { IPackage } from "../../interfaces";
-
-interface Props {
- product: IPackage;
- 
-}
+import { Typography, Grid, List, ListItem, ListItemText,Button,Stack } from "@mui/material";
+import { IPackage,PropsProductView } from "../../interfaces";
+import {useDispatch } from 'react-redux'
+import {DeletePackage} from '../../actions/cart'
 
 
-export const ProductView:React.FC<Props> = ({ product }) => {
+export const ProductView:React.FC<PropsProductView> = ({ product }) => {
+  const dispatch = useDispatch();
+  const {name,quantity,price,productList} = product;
   
-  const {name,quantity,price} = product
   return (
     <>
       <Grid container>
-      <Typography variant="h4">{name}<br/></Typography>
-      <Typography variant="h4">{quantity}<br/></Typography>
-      <Typography variant="h4">{price}<br/></Typography>
+      <Typography variant="h4">{name}</Typography>
+      <Typography variant="h4">{quantity}</Typography>
+      <Typography variant="h4">{price}</Typography>
+      <Stack direction="row">
+      <Button onClick={dispatch(DeletePackage())}>Primary</Button>
+      <Button href="#text-buttons">Link</Button>
+    </Stack>
       <List>
       <ListItem>
-        <ListItemText primary= "product" />
       </ListItem>
-      {/*{productList.map((product) => (
+      {/*{ productList!.map((prod) => (
         <ListItem>
-        <ListItemText primary= product />
+        <ListItemText key={prod.id} primary={prod.name}/>
         </ListItem>
       ))}*/}
      </List>

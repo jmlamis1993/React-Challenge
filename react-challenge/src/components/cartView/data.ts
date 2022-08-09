@@ -6,12 +6,12 @@ export default [
     price: 71.2,
     productList: [
       {
-        id: 1,
+        id: 4,
         name: "Cardboard box",
         category: "container",
       },
       {
-        id: 2,
+        id: 5,
         name: "Unisex Short Sleeve T-Shirt",
         category: "Green, Small",
       },

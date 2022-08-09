@@ -9,6 +9,7 @@ export interface IPackage {
   }
 
   export interface IProduct{
+    id:number;
     name: string;
     category: string;
 
@@ -17,6 +18,10 @@ export interface IPackage {
     cart: IPackage[];
     activePackage: IPackage|null;
     totalAmount : number
+   }
+   export interface PropsProductView {
+    product: IPackage;
+    
    }
 
   export type Actiontype = 
