@@ -1,5 +1,5 @@
 import { Actiontype, IPackage, IState } from "../interfaces/index";
-import data from "../components/cartview/data";
+import data from "../helpers/data";
 
 const initialState = {
     cart: data,
@@ -19,7 +19,10 @@ export default (state:IState = initialState, action: Actiontype) => {
         activeEvent: null 
      };
     case 'EditPackage':
-      return { ...state };
+      return {... state,
+          cart : state.cart.map(
+          e => (e.id === action.payload!.id) ? action.payload : e
+        )};
     case 'SetActivePackage':
       return { ...state, activePackage: action.payload };
     case 'ClearActivePackage':

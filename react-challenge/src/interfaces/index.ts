@@ -26,7 +26,7 @@ export interface IPackage {
 
   export type Actiontype = 
   |{type:"DeletePackage"}
-  |{type:"EditPackage"}
+  |{type:"EditPackage",payload:IPackage}
   |{type:"SetActivePackage",payload:IPackage}
   |{type:"ClearActivePackage"}
   |{type:"UpdateTotalAmount",payload:number}

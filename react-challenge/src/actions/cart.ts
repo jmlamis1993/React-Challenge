@@ -6,6 +6,11 @@ export const ClearActivePackage = () => ({
   export const DeletePackage = () => ({    
     type: 'DeletePackage',
   });
+  export const EditPackage = (pack:IPackage) => ({    
+    type: 'EditPackage',
+    payload : pack
+  }); 
+
   export const UpdateTotalAmount = (total:number) => ({    
     type: 'UpdateTotalAmount',
     payload : total
