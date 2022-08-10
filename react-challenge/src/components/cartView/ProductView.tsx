@@ -62,8 +62,8 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         <List>
           {productList
             ? productList!.map((prod) => (
-                <ListItem>
-                  <ListItemText key={prod.id} primary={prod.name} />
+                <ListItem key={prod.id}>
+                  <ListItemText  primary={prod.name} />
                 </ListItem>
               ))
             : ""}
