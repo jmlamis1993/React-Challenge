@@ -30,7 +30,7 @@ export const CartView = () => {
 
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         <Grid item xs={9} sx={{ marginTop: "32px" }}>
           <Grid container>
             <Typography className={style.title_text}>{`Your cart (${

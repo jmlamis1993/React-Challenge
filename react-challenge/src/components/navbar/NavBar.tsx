@@ -18,7 +18,7 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 
 export const NavBar = () => {
   return (
-    <Box>
+   
       <Toolbar variant="dense" className={style.navBar}>
         <Grid container spacing={2}>
           <Grid item xs={3}>
@@ -26,7 +26,7 @@ export const NavBar = () => {
               <Typography className={style.logo_text}>Logo</Typography>
             </Box>
           </Grid>
-          <Grid item xs={7}>
+          <Grid item xs={6}>
             <TextField
               className={style.search}
               InputProps={{
@@ -44,7 +44,7 @@ export const NavBar = () => {
               placeholder="Search Product"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <Box sx={{ display: "flex", color:"white", fontSize:15 }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -62,6 +62,6 @@ export const NavBar = () => {
           </Grid>
         </Grid>
       </Toolbar>
-    </Box>
+  
   );
 };

@@ -6,6 +6,7 @@ import style from "./assets/css/style.module.css";
 import "@fontsource/open-sans";
 import { Breadcrumb } from './components/breadcrumb/Breadcrumb';
 import { CartView } from './components/cartview/CartView';
+import { ListProduct } from './components/listproduct/ListProduct';
 
 
 const theme = createTheme({
@@ -19,18 +20,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>  
        {/* NavBar Section*/} 
-      <NavBar/>
+        {/* <NavBar/>*/} 
+      
        {/* Breadcrumb Section*/}
        <Breadcrumb/>
        <Container className={style.body_container}>              
-       <CartView/>    
+       <CartView/> 
+       <ListProduct/>   
        </Container>  
-    <Box sx={{ display: 'flex' }}>     
-        
-         <Container>
-      
-        </Container>       
-    </Box>
+    
   </ThemeProvider>
   );
 }

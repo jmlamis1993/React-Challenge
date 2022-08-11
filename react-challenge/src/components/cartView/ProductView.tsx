@@ -69,28 +69,25 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
             type="number"
             name="quantity"
             variant="standard"
-            InputProps={{ inputProps: { min: 0 } }}
+            InputProps={{ inputProps: { min: 0 }}}
             value={quat}
             onChange={handleQuantityChange}
           />     
           
           </Stack> 
-           <List sx = {{marginLeft:'25px'}}>    
+           <List sx = {{marginLeft:'25px',fontSize: '14px !important', fontWeight: '600 !important'}}>    
             {productList
               ? productList!.map((prod) => (
                   <ListItem
                     sx={{
-                      display: "list-item",
-                      fontSize: 14,
-                      fontWeight: 600,
+                      display: "list-item",                      
                       listStyle: "initial",
                       padding: 0,
                       paddingRight: -16,
-                    }}
-                    className={style.product_list}
+                    }}                    
                     key={prod.id}
                   >
-                    <ListItemText primary={prod.name} />
+                    <ListItemText disableTypography primary={prod.name} sx={{fontSize: '14px !important', fontWeight: '600 !important'}}/>
                   </ListItem>
                 ))
               : ""}
