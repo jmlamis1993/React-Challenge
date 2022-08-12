@@ -29,7 +29,7 @@ export const Footer = () => {
             </Typography>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <LocalPhoneIcon sx={{ width: 16 }} />
+                <LocalPhoneIcon sx={{ width: 16, marginTop: '8px' }} />
               </Grid>
               <Grid item className={style.phone_text}>
                 +1-202-555-0129
