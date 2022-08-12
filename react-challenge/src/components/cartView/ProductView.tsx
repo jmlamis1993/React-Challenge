@@ -58,21 +58,29 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         </Grid>
         <Grid item sx = {{marginLeft:'16px'}}>
         <Typography className={style.product_title}>{name}</Typography>
-          <Stack spacing={2}  direction="row">          
-          <Typography className={style.product_title_quantity}>
+          <Stack spacing={2}  direction="row">   
+           <Grid container>
+           <Grid item xs={4}>
+           <Typography className={style.product_title_quantity}>
             Quantity:{" "}
-          </Typography>       
-          
-          <TextField
+          </Typography>  
+            </Grid>  
+           <Grid item xs={2}>
+           <TextField
             sx ={{padding:0,}}
             className={style.product_title_quantity}
             type="number"
             name="quantity"
             variant="standard"
-            InputProps={{ inputProps: { min: 0 }}}
+            InputProps={{ inputProps: { min: 0 , fontSize:'1000px'}}}
             value={quat}
             onChange={handleQuantityChange}
-          />     
+          />  
+            </Grid>  
+            </Grid>       
+               
+          
+            
           
           </Stack> 
            <List sx = {{marginLeft:'25px',fontSize: '14px !important', fontWeight: '600 !important'}}>    

@@ -7,6 +7,7 @@ import "@fontsource/open-sans";
 import { Breadcrumb } from './components/breadcrumb/Breadcrumb';
 import { CartView } from './components/cartview/CartView';
 import { ListProduct } from './components/listproduct/ListProduct';
+import { Footer } from './components/footer/Footer';
 
 
 const theme = createTheme({
@@ -20,7 +21,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>  
        {/* NavBar Section*/} 
-        {/* <NavBar/>*/} 
+        <NavBar/>
       
        {/* Breadcrumb Section*/}
        <Breadcrumb/>
@@ -28,7 +29,7 @@ function App() {
        <CartView/> 
        <ListProduct/>   
        </Container>  
-    
+      <Footer/>
   </ThemeProvider>
   );
 }

@@ -20,7 +20,7 @@ export const NavBar = () => {
   return (
    
       <Toolbar variant="dense" className={style.navBar}>
-        <Grid container spacing={2}>
+        <Grid container>
           <Grid item xs={3}>
             <Box component="span" className={style.logo_box}>
               <Typography className={style.logo_text}>Logo</Typography>
