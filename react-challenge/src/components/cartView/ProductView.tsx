@@ -64,8 +64,8 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         spacing={2}
         sx={{ marginTop: "4px", marginBottom: "24px", padding: 0 }}
       >
-        <Grid item sx={{ display: "flex" }} xs={7}>
-          <Grid item sx={{ width: 120, height: 120 }}>
+        <Grid item sx={{ display: "flex" }} xs={12} sm={12} md={7}>
+          <Grid item sx={{ width: 120, height: 120 }} >
             <img src={image} alt={name} />
           </Grid>
           <Grid item sx={{ marginLeft: "16px" }}>
@@ -79,12 +79,12 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
                 </Grid>
                 <Grid item xs={2}>
                   <TextField
-                    sx={{ padding: 0 }}
+                    sx={{ padding: '0px 0 0px' }}
                     className={style.product_title_quantity}
                     type="number"
                     name="quantity"
                     variant="standard"
-                    InputProps={{ inputProps: { min: 0, fontSize: "1000px" } }}
+                    InputProps={{ inputProps: { min: 0}, className:'style.product_title_quantity' }}
                     value={quat}
                     onChange={handleQuantityChange}
                   />
@@ -152,7 +152,7 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
              ) :(
               <>
               <Grid container >
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={12} md={3}>
               <ListItemButton onClick={handleDelete}>
                 <ListItemIcon sx={{color: '#091625',height:'16px',width:'16px',minWidth: '24px !important'}} >
                 <img src={imagebtn} alt={name} />

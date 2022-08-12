@@ -9,12 +9,16 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  List,
+  Stack
 
 } from "@mui/material";
 import style from "../../assets/css/style.module.css";
 import { Search as SearchIcon } from "react-feather";
 import PersonIcon from '@mui/icons-material/Person';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
+import user from "../../assets/images/icons/user.png";
+import cart from "../../assets/images/icons/cart.png";
 
 export const NavBar = () => {
   return (
@@ -44,21 +48,22 @@ export const NavBar = () => {
               placeholder="Search Product"
             />
           </Grid>
-            <Grid item xs={3} >
-            <Box sx={{ display: "flex", color:"white", fontSize:15,minWidth: '35px' }}>
-              <ListItemButton>
-                <ListItemIcon className={style.navbar_space}>
-                  <PersonIcon   className={style.navBar_icons}/>
-                </ListItemIcon>
-                <ListItemText disableTypography primary="Sign in"  className={style.navBar_links}/>
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemIcon className={style.navbar_space}>
-                  <LocalMallIcon className={style.navBar_icons}/>
+            <Grid item xs={3} > 
+            <Stack  direction={{ sm: 'row' }}>
+            <ListItemButton>
+            <ListItemIcon className={style.navbar_space}> 
+                <img src={user} alt="Signin" className={style.navBar_icons} />
                 </ListItemIcon >
-                <ListItemText disableTypography primary="Cart"  className={style.navBar_links}/>
-              </ListItemButton>
-            </Box>
+                <ListItemText disableTypography primary="Sign in"  className={style.navBar_links} /> 
+            </ListItemButton>   
+            <ListItemButton>
+            <ListItemIcon className={style.navbar_space}> 
+                <img src={cart} alt="Signin" className={style.navBar_icons} />
+                </ListItemIcon >
+                <ListItemText disableTypography primary="Sign in"  className={style.navBar_links} /> 
+            </ListItemButton>           
+            </Stack>      
+                    
           </Grid>
         </Grid>
       </Toolbar>

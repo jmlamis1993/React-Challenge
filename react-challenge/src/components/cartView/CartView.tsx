@@ -32,7 +32,7 @@ export const CartView = () => {
   return (
     <>
       <Grid container spacing={3}>
-        <Grid item xs={9} sx={{ marginTop: "32px" }}>
+        <Grid item xs={12} sm={12} md={9} sx={{ marginTop: "32px" }}>
           <Grid container>
             <Typography className={style.title_text}>{`Your cart (${
               packages!.length
@@ -42,7 +42,7 @@ export const CartView = () => {
             return <ProductView key={pack.id} product={pack} />;
           })}
         </Grid>
-        <Grid item xs={3} sx={{ marginTop: "32px" }}>
+        <Grid item xs={12} sm={12} md={3}  sx={{ marginTop: "32px" }}>
           <Typography className={style.title_text}>Order Summary</Typography>
           <Stack
             direction="row"

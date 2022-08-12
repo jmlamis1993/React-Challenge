@@ -69,11 +69,7 @@
   margin-bottom: 12px !important;
   color: #091625
 }
-.product_title_quantity {
-  font-weight: 600 !important;
-  font-size: 16px !important; 
-  color: #091625
-}
+
 .input-MuiInput-input {
  padding: 0 !important;
 }
@@ -156,19 +152,21 @@
     font-size: 16px !important;
     line-height: 16px !important;  
     margin-top: 16px !important;  
+    margin-bottom: 10px !important;
 }
 .product_list_subtitle{  
     font-weight: 600 !important;
     font-size: 15px !important;
     line-height: 16px !important;
     
+    
 }
 .product_list_subtitle_resal{
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: right;
-    color: #6B737C;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    text-align: right !important;
+    color: #6B737C !important;
 }
 .footer_title{
   font-weight: 700 !important;
@@ -186,4 +184,25 @@
   background: #d3cecf;
   height: 48px;
   width: 172px;
+}
+.text_footer{
+  color: #6B737C !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 24px !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+ 
+  margin-right: 25% !important;
+  
+
+}
+.phone_text{
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 16px !important;
+}
+.footer_icons{
+  width: 32px;
+  height: 32px;
 }
