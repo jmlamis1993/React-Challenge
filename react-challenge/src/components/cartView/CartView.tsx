@@ -12,7 +12,8 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { UpdateTotalAmount } from "../../actions/cart";
 import style from "../../assets/css/style.module.css";
-import { textAlign } from "@mui/system";
+import { numberConvert } from "../../helpers/numberConvert";
+
 
 export const CartView = () => {
   const packages = useSelector<IState, IPackage[]>((state) => state.cart);
@@ -70,7 +71,7 @@ export const CartView = () => {
             </Grid>
             <Grid item xs={6} sx={{ textAlign: "right" }}>
               <Typography className={style.text_total_rigth}>
-                {total}
+                {`$${numberConvert(total)}`}
               </Typography>
             </Grid>
           </Stack>        

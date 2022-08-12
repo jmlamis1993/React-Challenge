@@ -19,22 +19,22 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 export const NavBar = () => {
   return (
    
-      <Toolbar variant="dense" className={style.navBar}>
-        <Grid container>
-          <Grid item xs={3}>
+      <Toolbar  className={style.navBar}>
+        <Grid container className={style.body_container}>
+          <Grid item xs={2}>
             <Box component="span" className={style.logo_box}>
               <Typography className={style.logo_text}>Logo</Typography>
             </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={7}>
             <TextField
+             size="small"
               className={style.search}
               InputProps={{
                 startAdornment: (
                   <InputAdornment
                     position="start"
-                    sx={{ fontSize: 15, boxSizing: "inherit" }}
-                  >
+                    sx={{ fontSize: 15, boxSizing: "inherit" }}>
                     <SvgIcon fontSize="small" color="action">
                       <SearchIcon />
                     </SvgIcon>
@@ -44,19 +44,19 @@ export const NavBar = () => {
               placeholder="Search Product"
             />
           </Grid>
-          <Grid item xs={3}>
-            <Box sx={{ display: "flex", color:"white", fontSize:15 }}>
+            <Grid item xs={3} >
+            <Box sx={{ display: "flex", color:"white", fontSize:15,minWidth: '35px' }}>
               <ListItemButton>
-                <ListItemIcon>
-                  <PersonIcon  sx={{  color:"white" }} />
+                <ListItemIcon className={style.navbar_space}>
+                  <PersonIcon   className={style.navBar_icons}/>
                 </ListItemIcon>
-                <ListItemText primary="Sign in" />
+                <ListItemText disableTypography primary="Sign in"  className={style.navBar_links}/>
               </ListItemButton>
               <ListItemButton>
-                <ListItemIcon>
-                  <LocalMallIcon sx={{  color:"white" }}/>
-                </ListItemIcon>
-                <ListItemText primary="Cart" />
+                <ListItemIcon className={style.navbar_space}>
+                  <LocalMallIcon className={style.navBar_icons}/>
+                </ListItemIcon >
+                <ListItemText disableTypography primary="Cart"  className={style.navBar_links}/>
               </ListItemButton>
             </Box>
           </Grid>

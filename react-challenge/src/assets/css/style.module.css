@@ -1,14 +1,22 @@
-.navBar {
-  width: 100%;
+.navBar {  
   background: #091625;
   height: 88px;
 }
+.navBar_icons{
+  color: #FFFFFF;
+}
+.navbar_space{
+  min-width: 35px !important;
+}
+.navBar_links{
+  font-size: 15px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
 .logo_box {
-  position: absolute;
+  position: absolute;  
   width: 172px;
-  height: 48px;
-  left: 92px;
-  top: 20px;
+  height: 48px;  
   background: #ced0d3;
 }
 .logo_text {
@@ -25,14 +33,14 @@
 }
 .search {
   background: #ffffff;
-  border-radius: 20px;
-  position: absolute;
+  border-radius: 20px;  
   width: 500px;
   height: 40px;
   font-family: "Open Sans";
+  margin-left: 7%  !important;
 }
 .breadcrumb {
-  width: 100%;
+  
   height: 64px;
   background: #e6e8e9;
 }
