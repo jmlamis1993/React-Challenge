@@ -258,6 +258,9 @@ input[type="number"]{
 .product_container{
   display: flex; 
 }
+.prduct_category{
+  color: #6B737C !important
+}
 
 @media screen and (max-width: 780px) {
   .footer{

@@ -14,6 +14,7 @@ import {
   Divider,
   ListItemButton,
   ListItemIcon,
+  Box
 } from "@mui/material";
 import { PropsProductView } from "../../interfaces";
 import { useDispatch } from "react-redux";
@@ -67,6 +68,12 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         <Grid item className={style.product_container} xs={12} sm={12} lg={7}>
           <Grid item sx={{ width: 120, height: 120 }} xs={12} sm={12} lg={3}>
             <img src={image} alt={name} />
+            {productList ?
+            <>
+             <Box sx={{ width: '34px', height: '20px', backgroundColor: "#E6E8E9",marginLeft:'40%',marginRight:'40%', marginTop:'10px'}}>            
+              <Typography sx ={{fontWeight: 600,fontSize: '10px',lineHeight: '16px',color: '#848A92'}} >PACK</Typography>
+            </Box>
+            </> : "" }           
           </Grid>
           <Grid item sx={{ marginLeft: "16px" }}>
             <Typography className={style.product_title}>{name}</Typography>
@@ -87,7 +94,8 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
               {productList
                 ? productList!.map((prod) => (
                     <ListItem sx={{ display: "list-item", listStyle: "initial", padding: 0, paddingRight: -16}} key={prod.id} >
-                    <ListItemText disableTypography primary={prod.name}sx={{fontSize: "14px !important", fontWeight: "600 !important"}}/>
+                    <ListItemText disableTypography  sx={{fontSize: "14px !important", fontWeight: "600 !important"}}/>
+                     {prod.name}: <span className={style.prduct_category}>({prod.category})</span>
                     </ListItem>
                   ))
                 : ""}
