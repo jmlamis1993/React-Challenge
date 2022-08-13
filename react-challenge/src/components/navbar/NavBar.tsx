@@ -24,9 +24,9 @@ export const NavBar = () => {
     <Toolbar className={style.navBar}>
       <Grid container className={style.body_container}>
         <Grid item xs={2}>
-          <Box component="span" className={style.logo_box}>
-            <Typography className={style.logo_text}>Logo</Typography>
-          </Box>
+        <Box sx={{ width: '172px', height: '48px', backgroundColor: "#CED0D3",}}>            
+              <Typography className={style.logo_text} >Logo</Typography>
+        </Box>          
         </Grid>
         <Grid item xs={7}>
           <TextField
