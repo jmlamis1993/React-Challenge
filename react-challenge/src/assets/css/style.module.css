@@ -49,6 +49,7 @@
     line-height: 16px !important;
     color: #535C67 !important;    
     margin-right: 24px !important;
+    width: 80px !important;
 }
 .body_container {
   margin-right: 5.7% !important;
@@ -70,8 +71,9 @@
   color: #091625
 }
 
-.input-MuiInput-input {
- padding: 0 !important;
+
+.MuiInput-input {
+ padding: 0 0 0 0 !important;
 }
 
 .product_link {
@@ -205,4 +207,22 @@
 .footer_icons{
   width: 32px;
   height: 32px;
+}
+
+input[type="number"]{
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px; 
+  font-weight: 600  !important; 
+  font-size: 16px !important;
+  color: #091625 !important;
+}
+.product_title_quantity{
+  font-weight: 600  !important;
+  font-size: 16px !important;
+  color: #091625 !important;
+}
+.navBar_right{
+  width: 15px !important;
 }

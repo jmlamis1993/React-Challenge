@@ -16,40 +16,41 @@ export const Breadcrumb = () => {
            <List sx = {{ display: 'flex', flexDirection: 'row', padding: 0 }}>            
            <ListItem>
                   <ListItemText
+                    
                     disableTypography
                     primary="All products"
                     className={style.list_itm}                        
                   />                  
                 </ListItem> 
-                <ListItem  sx={{paddingLeft:'24px'}}>   
+                <ListItem  >   
                 <ListItemText
                     disableTypography
                     primary="Packaging"  
                     className={style.list_itm}                    
                   />
                 </ListItem>
-                <ListItem  sx={{paddingLeft:'24px'}}> 
+                <ListItem  > 
                 <ListItemText
                     disableTypography
                     primary="Packaging"
                     className={style.list_itm}      
                   />
                 </ListItem> 
-                <ListItem  sx={{paddingLeft:'24px'}}>
+                <ListItem  >
                 <ListItemText
                     disableTypography
                     primary="Drinkware" 
                     className={style.list_itm}                     
                   />
                 </ListItem>    
-                <ListItem  sx={{paddingLeft:'24px'}}>
+                <ListItem  >
                 <ListItemText
                     disableTypography
                     primary="Apparel" 
                     className={style.list_itm}                     
                   />
                 </ListItem> 
-                <ListItem  sx={{paddingLeft:'24px'}}>
+                <ListItem  >
                 <ListItemText
                     disableTypography
                     primary="Backpacks" 

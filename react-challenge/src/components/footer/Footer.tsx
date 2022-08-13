@@ -12,12 +12,13 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Facebook from "../../assets/images/icons/Facebook.png";
 import Linkedin from "../../assets/images/icons/Linkedin.png";
 import Twitter from "../../assets/images/icons/Twitter.png";
-import Youtube from "../../assets/images/icons/Facebook.png";
+import Youtube from "../../assets/images/icons/Youtube.png";
+import { FooterCo } from "./FooterCo";
 
 export const Footer = () => {
   return (
     <>
-      <Grid container sx={{ background: "#E6E8E9", paddingTop: "80px" }}>
+      <Grid container sx={{ background: "#E6E8E9", paddingTop: "80px", paddingBottom:"112px" }}>
         <Grid container className={style.body_container}>
           <Grid item xs={4}>
             <Box component="span" className={style.logo_footer}>
@@ -53,6 +54,11 @@ export const Footer = () => {
                 className={style.footer_icons}
               />
               <img src={Youtube} alt="Youtube" className={style.footer_icons} />
+              <img
+                src={Facebook}
+                alt="Facebook"
+                className={style.footer_icons}
+              />
             </Stack>
           </Grid>
           <Grid item xs={3}>
@@ -166,6 +172,7 @@ export const Footer = () => {
           </Grid>
         </Grid>
       </Grid>
+      <FooterCo/>
     </>
   );
 };

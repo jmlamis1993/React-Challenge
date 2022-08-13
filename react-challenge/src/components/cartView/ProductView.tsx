@@ -77,14 +77,12 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
                     Quantity:{" "}
                   </Typography>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={2} sx={{ marginLeft: "-10px" }}>
                   <TextField
-                    sx={{ padding: '0px 0 0px' }}
-                    className={style.product_title_quantity}
                     type="number"
                     name="quantity"
                     variant="standard"
-                    InputProps={{ inputProps: { min: 0}, className:'style.product_title_quantity' }}
+                    InputProps={{ inputProps: { min: 0}}}
                     value={quat}
                     onChange={handleQuantityChange}
                   />

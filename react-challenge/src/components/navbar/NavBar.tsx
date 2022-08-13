@@ -50,13 +50,13 @@ export const NavBar = () => {
           </Grid>
             <Grid item xs={3} > 
             <Stack  direction={{ sm: 'row' }}>
-            <ListItemButton>
+            <ListItemButton className={style.navBar_right}>
             <ListItemIcon className={style.navbar_space}> 
                 <img src={user} alt="Signin" className={style.navBar_icons} />
                 </ListItemIcon >
                 <ListItemText disableTypography primary="Sign in"  className={style.navBar_links} /> 
             </ListItemButton>   
-            <ListItemButton>
+            <ListItemButton className={style.navBar_right}>
             <ListItemIcon className={style.navbar_space}> 
                 <img src={cart} alt="Signin" className={style.navBar_icons} />
                 </ListItemIcon >
