@@ -78,43 +78,16 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
                   </Typography>
                 </Grid>
                 <Grid item xs={2} sx={{ marginLeft: "-10px" }}>
-                  <TextField
-                    type="number"
-                    name="quantity"
-                    variant="standard"
-                    InputProps={{ inputProps: { min: 0}}}
-                    value={quat}
-                    onChange={handleQuantityChange}
-                  />
+                  <TextField type="number" name="quantity" variant="standard" InputProps={{ inputProps: { min: 0}}} value={quat} onChange={handleQuantityChange} />
                 </Grid>
               </Grid>
             </Stack>
             <List
-              sx={{
-                marginLeft: "25px",
-                fontSize: "14px !important",
-                fontWeight: "600 !important",
-              }}
-            >
+              sx={{ marginLeft: "25px", fontSize: "14px !important", fontWeight: "600 !important"}}>
               {productList
                 ? productList!.map((prod) => (
-                    <ListItem
-                      sx={{
-                        display: "list-item",
-                        listStyle: "initial",
-                        padding: 0,
-                        paddingRight: -16,
-                      }}
-                      key={prod.id}
-                    >
-                      <ListItemText
-                        disableTypography
-                        primary={prod.name}
-                        sx={{
-                          fontSize: "14px !important",
-                          fontWeight: "600 !important",
-                        }}
-                      />
+                    <ListItem sx={{ display: "list-item", listStyle: "initial", padding: 0, paddingRight: -16}} key={prod.id} >
+                    <ListItemText disableTypography primary={prod.name}sx={{fontSize: "14px !important", fontWeight: "600 !important"}}/>
                     </ListItem>
                   ))
                 : ""}
