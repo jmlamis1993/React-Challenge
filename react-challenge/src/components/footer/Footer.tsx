@@ -27,7 +27,7 @@ export const Footer = () => {
         }}
       >
         <Grid container className={style.body_container}>
-          <Grid item xs={4}>
+          <Grid item  xs={12} md={12} lg={4} >
           <Box sx={{ width: '172px', height: '48px', backgroundColor: "#CED0D3",}}>            
               <Typography className={style.logo_text} >Logo</Typography>
             </Box>
@@ -64,7 +64,7 @@ export const Footer = () => {
               />
             </Stack>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item  xs={12} md={12} lg={3}>
             <Typography className={style.footer_title}>Our company</Typography>
             <List>
               <ListItem>
@@ -104,7 +104,7 @@ export const Footer = () => {
               </ListItem>
             </List>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={12} lg={3}>
             {" "}
             <Typography className={style.footer_title}>
               How can we help
@@ -133,7 +133,7 @@ export const Footer = () => {
               </ListItem>
             </List>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12} md={12} lg={2}>
             <Typography className={style.footer_title}>Information</Typography>
             <List>
               <ListItem>

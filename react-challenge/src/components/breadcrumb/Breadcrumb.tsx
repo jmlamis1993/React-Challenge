@@ -1,10 +1,11 @@
-import { Stack, List, ListItem, ListItemText, Grid } from "@mui/material";
+import { Stack, List, ListItem, ListItemText, Grid,Hidden } from "@mui/material";
 import style from "../../assets/css/style.module.css";
 
 export const Breadcrumb = () => {
   return (
     <>
-      <Stack className={style.breadcrumb} direction="row" spacing={2}>
+     <Hidden only={['xs', 'md']}>
+     <Stack className={style.breadcrumb} direction="row" spacing={2}>
         <Grid container className={style.body_container}>
           <List sx={{ display: "flex", flexDirection: "row", padding: 0 }}>
             <ListItem>
@@ -52,6 +53,9 @@ export const Breadcrumb = () => {
           </List>
         </Grid>
       </Stack>
+      </Hidden>
     </>
+     
+      
   );
 };

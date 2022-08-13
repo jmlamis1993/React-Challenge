@@ -64,8 +64,8 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         spacing={2}
         sx={{ marginTop: "4px", marginBottom: "24px", padding: 0 }}
       >
-        <Grid item sx={{ display: "flex" }} xs={12} sm={12} md={7}>
-          <Grid item sx={{ width: 120, height: 120 }} >
+        <Grid item className={style.product_container} xs={12} sm={12} lg={7}>
+          <Grid item sx={{ width: 120, height: 120 }} xs={12} sm={12} lg={3}>
             <img src={image} alt={name} />
           </Grid>
           <Grid item sx={{ marginLeft: "16px" }}>
@@ -150,7 +150,7 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
              ) :(
               <>
               <Grid container >
-              <Grid item xs={12} sm={12} md={3}>
+              <Grid item xs={12} sm={12} lg={5}>
               <ListItemButton onClick={handleDelete}>
                 <ListItemIcon sx={{color: '#091625',height:'16px',width:'16px',minWidth: '24px !important'}} >
                 <img src={imagebtn} alt={name} />
@@ -162,10 +162,9 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
               </>   
               )}              
             </Stack>
-          </Grid>
-        
+          </Grid>        
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={12} lg={5} sm={12}>
           <Grid item>
             {" "}
             <Typography

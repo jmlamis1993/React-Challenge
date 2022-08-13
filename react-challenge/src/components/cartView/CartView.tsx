@@ -35,7 +35,7 @@ export const CartView = () => {
             return <ProductView key={pack.id} product={pack} />;
           })}
         </Grid>
-        <Grid item xs={12} sm={12} md={3} sx={{ marginTop: "32px" }}>
+        <Grid item xs={12} md={12} lg={3} sx={{ marginTop: "32px" }}>
           <Typography className={style.title_text}>Order Summary</Typography>
           <Stack
             direction="row"
@@ -57,26 +57,26 @@ export const CartView = () => {
             direction="row"
             sx={{ marginTop: "24px", marginBottom: "24px" }}
           >
-            <Grid item xs={6}>
+            <Grid item xs={6} md={6} lg={6}>
               <Typography className={style.text_total}>Total: </Typography>
             </Grid>
-            <Grid item xs={6} sx={{ textAlign: "right" }}>
+            <Grid item xs={6} md={6} lg={6} sx={{ textAlign: "right" }}>
               <Typography className={style.text_total_rigth}>
                 {`$${numberConvert(total)}`}
               </Typography>
             </Grid>
           </Stack>
-          <Grid item>
+          <Grid item xs={12} md={12} lg={12}>
             <Button
               variant="contained"
               className={style.btn_contained}
-              fullWidth
+              fullWidth              
             >
               Proceed to Checkout
             </Button>
           </Grid>
           <Grid item sx={{ marginTop: "12px" }}>
-            <Button variant="outlined" className={style.btn_outlined} fullWidth>
+            <Button variant="outlined" className={style.btn_outlined} fullWidth >
               Outlined
             </Button>
           </Grid>
