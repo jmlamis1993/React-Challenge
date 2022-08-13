@@ -21,7 +21,7 @@
 }
 .logo_text {
   font-size: 13px !important;
-  margin-top: 10% !important;
+  padding-top: 10% !important;
   font-style: normal;
   position: relative;
   font-style: normal;
@@ -199,6 +199,16 @@
   
 
 }
+.text_dropdown{
+  color: #535C67 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+ 
+  margin-right: 2% !important;
+}
 .phone_text{
   font-weight: 600 !important;
   font-size: 15px !important;
@@ -225,4 +235,17 @@ input[type="number"]{
 }
 .navBar_right{
   width: 15px !important;
+}
+.dropdown_container{
+  display:flex !important;
+}
+.dropdown{
+  margin-right: 5% !important; 
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  text-align: right !important;
+  color: #091625 !important;
+  
+  
 }

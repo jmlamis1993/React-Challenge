@@ -18,11 +18,18 @@ import { FooterCo } from "./FooterCo";
 export const Footer = () => {
   return (
     <>
-      <Grid container sx={{ background: "#E6E8E9", paddingTop: "80px", paddingBottom:"112px" }}>
+      <Grid
+        container
+        sx={{
+          background: "#E6E8E9",
+          paddingTop: "80px",
+          paddingBottom: "112px",
+        }}
+      >
         <Grid container className={style.body_container}>
           <Grid item xs={4}>
-            <Box component="span" className={style.logo_footer}>
-              <Typography className={style.logo_text}>Logo</Typography>
+          <Box sx={{ width: '172px', height: '48px', backgroundColor: "#CED0D3",}}>            
+              <Typography className={style.logo_text} >Logo</Typography>
             </Box>
             <Typography className={style.text_footer}>
               We sell custom products for all your needs. Packs and bulk
@@ -30,17 +37,13 @@ export const Footer = () => {
             </Typography>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <LocalPhoneIcon sx={{ width: 16, marginTop: '8px' }} />
+                <LocalPhoneIcon sx={{ width: 16, marginTop: "8px" }} />
               </Grid>
               <Grid item className={style.phone_text}>
                 +1-202-555-0129
               </Grid>
             </Grid>
-            <Stack
-              direction={'row'}
-              spacing={1}
-              sx = {{marginTop:'40px'}}
-            >
+            <Stack direction={"row"} spacing={1} sx={{ marginTop: "40px" }}>
               <img
                 src={Facebook}
                 alt="Facebook"
@@ -172,7 +175,7 @@ export const Footer = () => {
           </Grid>
         </Grid>
       </Grid>
-      <FooterCo/>
+      <FooterCo />
     </>
   );
 };
