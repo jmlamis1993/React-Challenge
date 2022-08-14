@@ -1,19 +1,27 @@
-.navBar {
-  width: 100%;
+.navBar {  
   background: #091625;
   height: 88px;
 }
+.navBar_icons{
+  color: #FFFFFF;
+}
+.navbar_space{
+  min-width: 35px !important;
+}
+.navBar_links{
+  font-size: 15px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
 .logo_box {
-  position: absolute;
+  position: absolute;  
   width: 172px;
-  height: 48px;
-  left: 92px;
-  top: 20px;
+  height: 48px;  
   background: #ced0d3;
 }
 .logo_text {
   font-size: 13px !important;
-  margin-top: 10% !important;
+  padding-top: 10% !important;
   font-style: normal;
   position: relative;
   font-style: normal;
@@ -25,14 +33,14 @@
 }
 .search {
   background: #ffffff;
-  border-radius: 20px;
-  position: absolute;
+  border-radius: 20px;  
   width: 500px;
   height: 40px;
   font-family: "Open Sans";
+  margin-left: 7%  !important;
 }
 .breadcrumb {
-  width: 100%;
+  
   height: 64px;
   background: #e6e8e9;
 }
@@ -41,6 +49,7 @@
     line-height: 16px !important;
     color: #535C67 !important;    
     margin-right: 24px !important;
+    width: 80px !important;
 }
 .body_container {
   margin-right: 5.7% !important;
@@ -61,13 +70,10 @@
   margin-bottom: 12px !important;
   color: #091625
 }
-.product_title_quantity {
-  font-weight: 600 !important;
-  font-size: 16px !important; 
-  color: #091625
-}
-.input-MuiInput-input {
- padding: 0 !important;
+
+
+.MuiInput-input {
+ padding: 0 0 0 0 !important;
 }
 
 .product_link {
@@ -124,7 +130,7 @@
     font-weight: 700 !important;
     font-size: 16px !important;
     font-style: normal !important;
-
+   
 }
 .btn_outlined{
     border: 2px solid #091625 !important;
@@ -148,19 +154,21 @@
     font-size: 16px !important;
     line-height: 16px !important;  
     margin-top: 16px !important;  
+    margin-bottom: 10px !important;
 }
 .product_list_subtitle{  
     font-weight: 600 !important;
     font-size: 15px !important;
     line-height: 16px !important;
     
+    
 }
 .product_list_subtitle_resal{
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: right;
-    color: #6B737C;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    text-align: right !important;
+    color: #6B737C !important;
 }
 .footer_title{
   font-weight: 700 !important;
@@ -178,4 +186,92 @@
   background: #d3cecf;
   height: 48px;
   width: 172px;
+}
+.text_footer{
+  color: #6B737C !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 24px !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+ 
+  margin-right: 25% !important;
+  
+
+}
+.text_dropdown{
+  color: #535C67 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+ 
+  margin-right: 2% !important;
+}
+.phone_text{
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 16px !important;
+}
+.footer_icons{
+  width: 32px;
+  height: 32px;
+}
+
+input[type="number"]{
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px; 
+  font-weight: 600  !important; 
+  font-size: 16px !important;
+  color: #091625 !important;
+}
+.product_title_quantity{
+  font-weight: 600  !important;
+  font-size: 16px !important;
+  color: #091625 !important;
+}
+.navBar_right{
+  max-width: 100px !important;
+  padding-left: 0 !important;
+  padding-right: 0!important;
+}
+.dropdown_container{
+  display:flex !important;
+}
+.dropdown{
+  margin-right: 5% !important; 
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  text-align: right !important;
+  color: #091625 !important;  
+  
+}
+.footer{
+  background: #E6E8E9;
+  padding-top: 80px;
+  padding-bottom: 112px;
+}
+.product_container{
+  display: flex; 
+}
+.prduct_category{
+  color: #6B737C !important
+}
+
+@media screen and (max-width: 780px) {
+  .footer{
+     padding-top: 40px;
+     padding-bottom: 60px;    
+    text-align: center !important;
+    
+  }
+ 
+.product_container{
+  display: inline; 
+}
+
 }

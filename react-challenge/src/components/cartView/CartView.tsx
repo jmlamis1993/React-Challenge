@@ -1,10 +1,4 @@
-import {
-  Typography,
-  Grid,
-  Button,
-  Divider,
-  Stack,
-} from "@mui/material";
+import { Typography, Grid, Button, Divider, Stack } from "@mui/material";
 import { ProductView } from "./ProductView";
 import { useSelector } from "react-redux";
 import { IPackage, IState } from "../../interfaces";
@@ -12,7 +6,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { UpdateTotalAmount } from "../../actions/cart";
 import style from "../../assets/css/style.module.css";
-import { textAlign } from "@mui/system";
+import { numberConvert } from "../../helpers/numberConvert";
 
 export const CartView = () => {
   const packages = useSelector<IState, IPackage[]>((state) => state.cart);
@@ -31,7 +25,7 @@ export const CartView = () => {
   return (
     <>
       <Grid container spacing={3}>
-        <Grid item xs={9} sx={{ marginTop: "32px" }}>
+        <Grid item xs={12} sm={12} md={9} sx={{ marginTop: "32px" }}>
           <Grid container>
             <Typography className={style.title_text}>{`Your cart (${
               packages!.length
@@ -41,7 +35,7 @@ export const CartView = () => {
             return <ProductView key={pack.id} product={pack} />;
           })}
         </Grid>
-        <Grid item xs={3} sx={{ marginTop: "32px" }}>
+        <Grid item xs={12} md={12} lg={3} sx={{ marginTop: "32px" }}>
           <Typography className={style.title_text}>Order Summary</Typography>
           <Stack
             direction="row"
@@ -63,22 +57,29 @@ export const CartView = () => {
             direction="row"
             sx={{ marginTop: "24px", marginBottom: "24px" }}
           >
-            <Grid item xs={6}>
-              <Typography className={style.text_total}>
-                Total:{" "}
-              </Typography>
+            <Grid item xs={6} md={6} lg={6}>
+              <Typography className={style.text_total}>Total: </Typography>
             </Grid>
-            <Grid item xs={6} sx={{ textAlign: "right" }}>
+            <Grid item xs={6} md={6} lg={6} sx={{ textAlign: "right" }}>
               <Typography className={style.text_total_rigth}>
-                {total}
+                {`$${numberConvert(total)}`}
               </Typography>
             </Grid>
-          </Stack>        
-          <Grid item><Button variant="contained" className={style.btn_contained} fullWidth >Proceed to Checkout</Button></Grid>
-          <Grid item sx = {{marginTop:"12px"}}><Button variant="outlined" className={style.btn_outlined} fullWidth>Outlined</Button></Grid>
-      
-      
-    
+          </Stack>
+          <Grid item xs={12} md={12} lg={12}>
+            <Button
+              variant="contained"
+              className={style.btn_contained}
+              fullWidth              
+            >
+              Proceed to Checkout
+            </Button>
+          </Grid>
+          <Grid item sx={{ marginTop: "12px" }}>
+            <Button variant="outlined" className={style.btn_outlined} fullWidth >
+              Outlined
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </>
