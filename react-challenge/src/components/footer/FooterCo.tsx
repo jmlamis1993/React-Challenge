@@ -1,14 +1,12 @@
 import {
   Typography,
   Grid,
-  FormControl,
-  InputLabel,
+ 
   Select,
   MenuItem,
-  Stack,
+
 } from "@mui/material";
 import style from "../../assets/css/style.module.css";
-import ReactFlagsSelect from "react-flags-select";
 import Facebook from "../../assets/images/icons/Group.png";
 
 export const FooterCo = () => {

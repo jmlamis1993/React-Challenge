@@ -1,4 +1,4 @@
-import { Actiontype, IPackage, IState } from "../interfaces/index";
+import { Actiontype, IState } from "../interfaces/index";
 import data from "../helpers/data";
 
 const initialState = {
@@ -11,20 +11,19 @@ export default (state:IState = initialState, action: Actiontype) => {
   switch (action.type) {
     
     case 'DeletePackage':
-      return{
-        ... state,
+      return{...state,
         cart : state.cart.filter(             
           e => (e.id !== state.activePackage!.id)                
         ),
         activeEvent: null 
      };
     case 'EditPackage':
-      return {... state,
+      return {...state,
           cart : state.cart.map(
           e => (e.id === action.payload!.id) ? action.payload : e
         )};
     case 'SetActivePackage':
-      return { ...state, activePackage: action.payload };
+      return {...state, activePackage: action.payload };
     case 'ClearActivePackage':
       return { ...state, activePackage:null };
       case 'UpdateTotalAmount':

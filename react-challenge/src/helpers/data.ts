@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     id: 1,
     name: "My Christmas pack",
@@ -37,3 +37,4 @@ export default [
     
   },
 ];
+export default data;

@@ -4,7 +4,7 @@ import style from "../../assets/css/style.module.css";
 export const ProductCard = () => {
   return (
     <>      
-      <Box sx={{ width: '19vw', height: '19vw', backgroundColor: "#E6E8E9",}}/>      
+      <Box sx={{ width: '18vw', height: '18vw', backgroundColor: "#E6E8E9",}}/>      
       <Typography className={style.product_list_title}>Unisex Short Sleeve T-Shirt</Typography>
       <Stack direction="row" spacing={2}>
       <Grid container>

@@ -1,5 +1,4 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { NavBar } from "./components/navbar/NavBar";
 import style from "./assets/css/style.module.css";
@@ -18,7 +17,6 @@ const theme = createTheme({
 
 function App() {
   return (
-<<<<<<< HEAD
     <ThemeProvider theme={theme}>  
         <NavBar/>
         <Breadcrumb/>
@@ -28,17 +26,6 @@ function App() {
        </Container>  
       <Footer/>
   </ThemeProvider>
-=======
-    <ThemeProvider theme={theme}>
-      <NavBar />
-      <Breadcrumb />
-      <Container className={style.body_container}>
-        <CartView />
-        <ListProduct />
-      </Container>
-      <Footer />
-    </ThemeProvider>
->>>>>>> 2982cf48efb76a7346d7790939015719a8114388
   );
 }
 
