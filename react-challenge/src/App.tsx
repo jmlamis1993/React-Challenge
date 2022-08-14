@@ -20,11 +20,8 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>  
-       {/* NavBar Section*/} 
         <NavBar/>
-      
-       {/* Breadcrumb Section*/}
-       <Breadcrumb/>
+        <Breadcrumb/>
        <Container className={style.body_container}>              
        <CartView/> 
        <ListProduct/>   
