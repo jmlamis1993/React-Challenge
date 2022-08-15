@@ -18,13 +18,13 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>  
-        <NavBar/>
+         <NavBar/> 
         <Breadcrumb/>
        <Container className={style.body_container}>              
        <CartView/> 
        <ListProduct/>   
        </Container>  
-      <Footer/>
+      <Footer/> 
   </ThemeProvider>
   );
 }

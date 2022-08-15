@@ -66,16 +66,17 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         sx={{ marginTop: "4px", marginBottom: "24px", padding: 0 }}
       >
         <Grid item className={style.product_container} xs={12} sm={12} lg={7}>
-          <Grid item sx={{ width: 120, height: 120 }} xs={12} sm={12} lg={3}>
+          <Grid item sx={{ width: 120, height: 120 }} xs={12} sm={12} lg={3} >
             <img src={image} alt={name} />
             {productList ?
             <>
-             <Box sx={{ width: '34px', height: '20px', backgroundColor: "#E6E8E9",marginLeft:'40%',marginRight:'40%', marginTop:'10px'}}>            
+             <Box className={style.box_img}>            
               <Typography sx ={{fontWeight: 600,fontSize: '10px',lineHeight: '16px',color: '#848A92'}} >PACK</Typography>
             </Box>
             </> : "" }           
           </Grid>
-          <Grid item sx={{ marginLeft: "16px" }}>
+          <Grid item sx={{ marginLeft: "16px" }} className={style.date_product_container}
+          >
             <Typography className={style.product_title}>{name}</Typography>
             <Stack spacing={2} direction="row">
               <Grid container>
@@ -84,7 +85,7 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
                     Quantity:{" "}
                   </Typography>
                 </Grid>
-                <Grid item xs={2} sx={{ marginLeft: "-10px" }}>
+                <Grid item xs={2} sx={{ marginLeft: "-10px" }} className={style.check_number}>
                   <TextField type="number" name="quantity" variant="standard" InputProps={{ inputProps: { min: 0}}} value={quat} onChange={handleQuantityChange} />
                 </Grid>
               </Grid>
@@ -147,18 +148,16 @@ export const ProductView: React.FC<PropsProductView> = ({ product }) => {
         </Grid>
         <Grid item xs={12} lg={5} sm={12}>
           <Grid item>
-            {" "}
             <Typography
               className={style.product_price}
             >{`$${numberConvert(price)}`}</Typography>{" "}
           </Grid>
           <Grid item>
-            {" "}
             <Typography className={style.product_price}>{`Total: $${
               numberConvert(price * quantity)
-            }`}</Typography>{" "}
+            }`}</Typography>
           </Grid>
-        </Grid>
+          </Grid>
       </Grid>
 
       <Divider sx={{ background: "#CED0D3", height: "1px" }} />

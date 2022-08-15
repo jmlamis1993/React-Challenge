@@ -261,17 +261,116 @@ input[type="number"]{
 .prduct_category{
   color: #6B737C !important
 }
+.footer_container{
+  background: #E6E8E9;
+  padding-top: 80px;
+  padding-bottom: 112px;
+}
+.box_container{
+  width: 18vw;
+  height: 18vw;
+  background-color: #E6E8E9;
+}
+.box_img{
+  width: 34px;
+  height: 20px; 
+  background-color: #E6E8E9;
+  margin-left:40%;
+  margin-right:40%;
+  margin-top:10px;
+  padding-left: 7px;
+}
 
 @media screen and (max-width: 780px) {
   .footer{
-     padding-top: 40px;
-     padding-bottom: 60px;    
+    padding-top: 40px;
+    padding-bottom: 60px;    
     text-align: center !important;
+    margin-left: 0% !important;
+    margin-right: 0% !important;
     
+  }
+  .body_container {
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+  }
+  .navBar_right{
+    width:25px !important;
+    display: inline; 
   }
  
 .product_container{
   display: inline; 
 }
+.logo_box {
+  width: 150px !important;
+  height: 40px !important;
+}
+.navBar_links{
+  display: none;
+}
+.date_product_container{
+  margin-left: 0px !important;
 
+}
+.footer_link {
+  text-align: center !important;
+}
+.mb_class{  
+  margin-bottom: 5% !important;
+  text-align: center !important;
+}
+.footer_title{
+  text-align: center !important;
+}
+.text_footer{
+  text-align: center !important;
+  margin-top: 10% !important;
+  margin-bottom: 6px !important;
+  margin-right: 6% !important;
+  margin-left: 6% !important;
+}
+.phone_footer_text{
+  padding-right: 25% !important;
+  padding-left: 25% !important;
+}
+.logo_footer{
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo_container{
+  display: inline-block !important;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+.dropdown_container{
+  display: inline !important;
+  vertical-align: middle;
+  text-align: center;
+}
+.footer_container{
+  background: #E6E8E9;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.box_container{
+  width: 30vw;
+  height: 30vw;
+  display: inline-block !important;
+  vertical-align: middle;
+ text-align: center;
+}
+.check_number
+{
+  margin-left: 0px;
+}
+.box_img{
+  display: none;
+}
+.date_product_container{
+  margin-left: 0px !important;
+}
+.product_title{
+  margin-top: 20px !important;
+}
 }

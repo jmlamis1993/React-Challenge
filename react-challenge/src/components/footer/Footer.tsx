@@ -18,32 +18,25 @@ import { FooterCo } from "./FooterCo";
 export const Footer = () => {
   return (
     <>
-      <Grid
-        container
-        sx={{
-          background: "#E6E8E9",
-          paddingTop: "80px",
-          paddingBottom: "112px",
-        }}
-      >
+      <Grid container className = {style.footer_container}>
         <Grid container className={style.body_container}>
-          <Grid item  xs={12} md={12} lg={4} >
-          <Box sx={{ width: '172px', height: '48px', backgroundColor: "#CED0D3",}}>            
+          <Grid item  xs={12} md={12} lg={4} className={style.mb_class}>
+          <Box sx={{ width: '172px', height: '48px', backgroundColor: "#CED0D3"}} className={style.logo_footer}>            
               <Typography className={style.logo_text} >Logo</Typography>
             </Box>
             <Typography className={style.text_footer}>
               We sell custom products for all your needs. Packs and bulk
               products that you will enjoy.
             </Typography>
-            <Grid container direction="row" alignItems="center">
+             <Grid container direction="row" alignItems="center" className ={style.phone_footer_text}>
               <Grid item>
                 <LocalPhoneIcon sx={{ width: 16, marginTop: "8px" }} />
               </Grid>
               <Grid item className={style.phone_text}>
                 +1-202-555-0129
               </Grid>
-            </Grid>
-            <Stack direction={"row"} spacing={1} sx={{ marginTop: "40px" }}>
+            </Grid> 
+            <Stack direction={"row"} spacing={1} sx={{ marginTop: "40px" }} className ={style.logo_container}>
               <img
                 src={Facebook}
                 alt="Facebook"
@@ -64,10 +57,10 @@ export const Footer = () => {
               />
             </Stack>
           </Grid>
-          <Grid item  xs={12} md={12} lg={3}>
+          <Grid item  xs={12} md={12} lg={3} className={style.mb_class}>
             <Typography className={style.footer_title}>Our company</Typography>
             <List>
-              <ListItem>
+              <ListItem sx={{ paddingLeft: "24px" }}>
                 <ListItemText
                   disableTypography
                   primary="About us"
@@ -104,13 +97,13 @@ export const Footer = () => {
               </ListItem>
             </List>
           </Grid>
-          <Grid item xs={12} md={12} lg={3}>
+          <Grid item xs={12} md={12} lg={3} className={style.mb_class}>
             {" "}
             <Typography className={style.footer_title}>
               How can we help
             </Typography>
             <List>
-              <ListItem>
+              <ListItem sx={{ paddingLeft: "24px" }}>
                 <ListItemText
                   disableTypography
                   primary="Place a ticket"
